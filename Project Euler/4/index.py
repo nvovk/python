@@ -1,10 +1,13 @@
 from checkpol import CheckPol
 
-num = 999*999
-pol = CheckPol(list(str(num)))
+pol = False
+lpol = []
 
-while pol == False:
-    num = num - 1
-    pol = CheckPol(list(str(num)))
+for i in range(100,1000):
+    for j in range(100,1000):
+        dob = i * j
+        pol = CheckPol(list(str(dob)))
+        if pol == True:
+            lpol.append(dob)
 
-print(num)
+print(max(lpol))

@@ -2,10 +2,10 @@ from checkdiv import CheckDiv
 
 num = 200
 
-pol = CheckPol(num)
+pol = CheckDiv(num)
 
 while pol == False:
     num = num + 20
-    pol = CheckPol(num)
+    pol = CheckDiv(num)
 
 print(num)
