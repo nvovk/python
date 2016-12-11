@@ -1,17 +1,8 @@
-from Pythagorean import Pyth
+from simplenum import SimpleNum
 
-lsc = lsb = lsa = range(1,500)
+ls = SimpleNum(2000000)
+sum = 0
+for i in ls:
+    sum = sum + i
 
-for ia in lsa:
-    for ib in lsb:
-        if ib > ia:
-            for ic in lsc:
-                if ic > ib:
-                    k = Pyth(ia,ib,ic)
-                    if (k == True) and (ia + ib + ic == 1000):
-                        r1 = ia
-                        r2 = ib
-                        r3 = ic
-                        break
-prod = r1 * r2 * r3
-print(prod)
+print(sum)
