@@ -1,18 +1,16 @@
-def SumSq(n):
-    m = 0
+def SumSq(ls):
+    sq = 0
 
-    for i in nums:
-        if l % i != 0: m = m + 1
+    for i in ls:
+        sq = sq + i*i
+    return sq
 
-    if m > 0: return False
-    else: return True
+def SqSum(ls):
+    sum = 0
 
-def SqSum(n):
-    nums = [11, 13, 14, 16, 17, 18, 19, 20]
-    m = 0
+    for i in ls:
+        sum = sum + i
 
-    for i in nums:
-        if l % i != 0: m = m + 1
+    sq = sum * sum
 
-    if m > 0: return False
-    else: return True
+    return sq

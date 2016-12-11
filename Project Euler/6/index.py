@@ -1,12 +1,10 @@
 from SqS import SumSq, SqSum
-from math import pow
 
-lst = range(1,101)
+num = range(1,101)
 
-pol = CheckPol(num)
+s1 = SumSq(num)
+s2 = SqSum(num)
 
-while pol == False:
-    num = num + 20
-    pol = CheckPol(num)
+dif = s2 - s1
 
-print(num)
+print(dif)
