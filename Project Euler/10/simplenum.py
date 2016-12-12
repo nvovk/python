@@ -1,4 +1,4 @@
-#This function returns list of primery numbers (from 3 to n)
+#This function returns list of primery numbers (from 2 to n)
 
 def SimpleNum(n):
     lst = [2]
