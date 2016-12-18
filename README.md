@@ -1,5 +1,8 @@
 # python
-All my tasks that are written for learning Python. From Elementary to Challengingю
+All my tasks that are written for learning Python. From Elementary to Challenging level.
 
-Project Euler:
-14 - needs to be optimized
+List of tasks:
+https://projecteuler.net/archives
+
+Note:
+Project Euler / 14 - needs to be optimized
