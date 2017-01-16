@@ -1,17 +1,24 @@
 from rectangle import Rectangle
 
-A = [1, 2]
-C = [5, 4]
+A1 = [1, 2]
+C1 = [5, 4]
 
-r1 = Rectangle(A,C)
-r1.get()
+A2 = [3, 5]
+C2 = [5, 6]
 
+r1 = Rectangle(A1, C1)
+r2 = Rectangle(A2, C2)
+
+r = r1.plus(r2)
+r.get()
+
+"""
 r1.move(1,1)
 r1.get()
 
 r1.resize(10,10)
 r1.get()
-"""
+
 r1 = Rectangle(1,1)
 r2 = Rectangle(2,2)
 

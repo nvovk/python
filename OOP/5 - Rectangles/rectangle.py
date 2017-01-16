@@ -29,25 +29,30 @@ class Rectangle:
         self.b[1] += h
 
     def plus(self, r):
+        h1 = self.height()
+        h2 = r.height()
+        w1 = self.width()
+        w2 = r.width()
+        a1 = [0, 0]
 
-        if self.height() >= r.height():
-
+        if h1 >= h2:
+            c1 = [w1 + w2, h1]
+            r1 = Rectangle(a1, c1)
         else:
+            c1 = [w1 + w2, h2]
+            r1 = Rectangle(a1, c1)
 
-        if self.width() >= r.width():
-            a1 = self.a
-            c1 = [self.c[0], self.c[1] + r.height()]
-            r3 = Rectangle(a1,c1)
+        if w1 >= w2:
+            c1 = [w1, h1 + h2]
+            r2 = Rectangle(a1, c1)
         else:
-            a1 = self.a
-            c1 = [self.c[0], self.c[1] + r.height()]
-            r4 = Rectangle(a1, c1)
+            c1 = [w2, h1 + h2]
+            r2 = Rectangle(a1, c1)
 
-
-
-
-
-
+        if r1.size() >= r2.size():
+            return r1
+        else:
+            return r2
 
     def height(self):
         return abs(self.a[1]-self.b[1])
