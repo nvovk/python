@@ -1,61 +1,39 @@
 from rectangle import Rectangle
 
-A1 = [1, 2]
-C1 = [5, 4]
+A0 = [0, 0]
+C0 = [3, 1]
 
-A2 = [3, 5]
-C2 = [5, 6]
+print('Rectangle:')
+r0 = Rectangle(A0, C0)
+r0.get()
+
+print('Move for 1 point OX and 1 point OY:')
+r0.move(1, 1)
+r0.get()
+
+print('Resize for 1 point OX and 1 point OY:')
+r0.resize(1, 1)
+r0.get()
+
+A1 = [1, 1]
+C1 = [3, 5]
+
+A2 = [1, 1]
+C2 = [4, 3]
 
 r1 = Rectangle(A1, C1)
 r2 = Rectangle(A2, C2)
 
+print('Rectangle 1:')
+r1.get()
+
+print('Rectangle 2:')
+r2.get()
+
 r = r1.plus(r2)
+print('Rectangle 1 plus 2:')
 r.get()
 
-"""
-r1.move(1,1)
-r1.get()
-
-r1.resize(10,10)
-r1.get()
-
-r1 = Rectangle(1,1)
-r2 = Rectangle(2,2)
-
-print(r1.width, ' - width r1')
-print(r1.height, ' - height r1')
-print(r1.centre, ' - centre r1')
-print(r2.width, ' - width r2')
-print(r2.height, ' - height r2')
-print(r2.centre, ' - centre r2')
-
-r1.move(3,3)
-r1.resize(3,3)
-r2.move(4,4)
-r2.resize(4,4)
-
-print(r1.width, ' - width r1')
-print(r1.height, ' - height r1')
-print(r1.centre, ' - centre r1')
-print(r2.width, ' - width r2')
-print(r2.height, ' - height r2')
-print(r2.centre, ' - centre r2')
-
-s1 = Square(1)
-s2 = Square(2)
-
-print(s1.side, ' - side s1')
-print(s1.centre, ' - centre s1')
-print(s2.side, ' - side s2')
-print(s2.centre, ' - centre s2')
-
-s1.move(3,3)
-s1.resize(3)
-s2.move(4,4)
-s2.resize(4)
-
-print(s1.side, ' - side s1')
-print(s1.centre, ' - centre s1')
-print(s2.side, ' - side s2')
-print(s2.centre, ' - centre s2')
-"""
+r = r1.common(r2)
+print('Rectangle 1 and 2 (common scale):')
+r.get()

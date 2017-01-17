@@ -28,6 +28,15 @@ class Rectangle:
         self.c[1] += h
         self.b[1] += h
 
+    def height(self):
+        return abs(self.a[1]-self.b[1])
+
+    def width(self):
+        return abs(self.a[0] - self.d[0])
+
+    def size(self):
+        return self.height() * self.width()
+
     def plus(self, r):
         h1 = self.height()
         h2 = r.height()
@@ -54,27 +63,23 @@ class Rectangle:
         else:
             return r2
 
-    def height(self):
-        return abs(self.a[1]-self.b[1])
+    def common(self, r):
+        h1 = self.height()
+        h2 = r.height()
+        w1 = self.width()
+        w2 = r.width()
+        a1 = [0, 0]
+        c1 = [0, 0]
 
-    def width(self):
-        return abs(self.a[0] - self.d[0])
+        if w1 >= w2:
+            c1[0] = w2
+        else:
+            c1[0] = w1
 
-    def size(self):
-        return self.height() * self.width()
+        if h1 >= h2:
+            c1[1] = h2
+        else:
+            c1[1] = h1
 
-
-
-
-class Square:
-
-    def __init__(self, side):
-        self.side = side
-        self.centre = [0, 0]
-
-    def resize(self, side):
-        self.side += side
-
-    def move(self, osx, osy):
-        self.centre[0] += osx
-        self.centre[1] += osy
+        r1 = Rectangle(a1, c1)
+        return r1
