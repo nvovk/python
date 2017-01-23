@@ -23,3 +23,13 @@ print(l1)
 
 c = (len1 - len2) / 2
 print('Amount of opposites: ', int(c))
+
+
+
+g = open('G.txt', 'w')
+for i in l:
+    g.write(str(i) + '\n')
+
+g = open('G.txt', 'r')
+lg = [line.strip() for line in g]
+g.close()
