@@ -1,10 +1,10 @@
 import random
-from opposit import opp, pairs
+from item import item
 
 n = int(input('Enter N - '))
 l = []
 for i in range(0,n):
-    l.append(random.randint(-10, 10))
+    l.append(random.randint(0, 10))
 
 f = open('F.txt', 'w')
 for i in l:
@@ -15,21 +15,19 @@ l1 = [line.strip() for line in f]
 
 f.close()
 
-len1 = len(l1)
-print(l1)
+l2 = []
 
-len2 = len(opp(l1))
-print(l1)
+for i in range(1, len(l)+1):
+    l2.append(item(l1,i))
 
-c = (len1 - len2) / 2
-print('Amount of opposites: ', int(c))
-
-
+print('List - ', l1)
 
 g = open('G.txt', 'w')
-for i in l:
+for i in l2:
     g.write(str(i) + '\n')
 
 g = open('G.txt', 'r')
 lg = [line.strip() for line in g]
 g.close()
+
+print('Multiple list - ', lg)

@@ -17,7 +17,7 @@ f = open('F.txt', 'r')
 lf = [line.strip() for line in f]
 
 for i in lf:
-    if int(i) % k == 0:
+    if int(i) % k != 0:
         g.write(str(i) + '\n')
 
 g = open('G.txt', 'r')
