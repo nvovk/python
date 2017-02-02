@@ -1,4 +1,5 @@
-from figures import Circle, Rectangle, Square
+from worker import *
+from actions import *
 
 c1 = Circle(1)
 c2 = Circle(2)
