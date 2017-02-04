@@ -43,4 +43,3 @@ def lastthree(l):
     else:
         for i in range(len(l) - 3,len(l)):
             l[i].out()
-

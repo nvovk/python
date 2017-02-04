@@ -19,7 +19,6 @@ class Worker:
         print(self.id,' ',self.surname,' ',self.name,' ',self.salary(),'$')
 
 
-
 class PerHour(Worker):
     # Підклас працівників з погодинною оплатою
     def salary(Worker):
@@ -32,7 +31,3 @@ class Fixed(Worker):
     def salary(Worker):
         S = Worker.sal
         return S
-
-
-#a = Fixed(1,'Name','Surn',150)
-#a.out()
